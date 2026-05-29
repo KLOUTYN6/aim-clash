@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AIM Clash media gallery">
+  <title>Media | AIM Clash</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-nav>
+    <a class="brand" href="index.html" aria-label="AIM Clash home">
+      <span class="brand-mark"></span>
+      <span>AIM Clash</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="posts.html">Posts</a>
+      <a href="aimclash.html">AIM Clash</a>
+      <a href="media.html">Media</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-intro compact">
+      <p class="kicker">Screenshots / GIF slots / trailer embeds</p>
+      <h1>Media</h1>
+      <p>A categorized showcase for screenshots, GIFs, weapons, player status, accessories, maps, locations, and evolving game systems.</p>
+    </section>
+
+    <div class="filter-bar" aria-label="Media categories">
+      <button class="filter-button active" type="button" data-filter="all">All</button>
+      <button class="filter-button" type="button" data-filter="weapons">Weapons</button>
+      <button class="filter-button" type="button" data-filter="status">Status</button>
+      <button class="filter-button" type="button" data-filter="accessories">Accessories</button>
+      <button class="filter-button" type="button" data-filter="maps">Maps / Locations</button>
+      <button class="filter-button" type="button" data-filter="systems">Systems</button>
+    </div>
+
+    <section class="media-grid" aria-label="AIM Clash media gallery">
+      <figure class="media-item large" data-category="maps">
+        <img src="assets/screen-checkpoint.jpg" alt="Checkpoint surrounded by heavy fog">
+        <figcaption><span>Maps / Locations</span>Checkpoint fog test</figcaption>
+      </figure>
+      <figure class="media-item" data-category="systems">
+        <img src="assets/screen-industrial-fog.jpg" alt="Industrial zone buried in green-gray haze">
+        <figcaption><span>Systems</span>Industrial haze</figcaption>
+      </figure>
+      <figure class="media-item" data-category="weapons">
+        <img src="assets/screen-night-raid.jpg" alt="Night raid lighting study">
+        <figcaption><span>Weapons</span>Night raid lighting</figcaption>
+      </figure>
+      <figure class="media-item tall" data-category="accessories">
+        <img src="assets/screen-safehouse.jpg" alt="Safehouse at the edge of a ruined district">
+        <figcaption><span>Accessories</span>Safehouse exterior</figcaption>
+      </figure>
+      <figure class="media-item" data-category="status">
+        <img src="assets/hero-apocalypse.jpg" alt="Dark survival status concept scene">
+        <figcaption><span>Status</span>Survival state</figcaption>
+      </figure>
+    </section>
+
+    <section class="trailer-slot" aria-label="Trailer embed slot">
+      <div>
+        <p class="kicker">Trailer channel</p>
+        <h2>Embed Ready</h2>
+        <p>This area is reserved for a real trailer embed when a public AIM Clash build video exists.</p>
+      </div>
+      <div class="video-frame">
+        <span>Trailer slot offline</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create AIM Clash post blocks for the static GitHub Pages site">
+  <title>Admin | AIM Clash</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-nav>
+    <a class="brand" href="index.html" aria-label="AIM Clash home">
+      <span class="brand-mark"></span>
+      <span>AIM Clash</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="posts.html">Posts</a>
+      <a href="aimclash.html">AIM Clash</a>
+      <a href="media.html">Media</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-intro compact">
+      <p class="kicker">Static post creator</p>
+      <h1>Admin</h1>
+      <p>Create a clean post block for the site. GitHub Pages cannot save posts by itself, so this tool gives you the exact block to paste into posts.js.</p>
+    </section>
+
+    <section class="admin-layout">
+      <form class="admin-panel" id="post-creator">
+        <label>
+          <span>Post title</span>
+          <input name="title" type="text" placeholder="New weapon handling test" required>
+        </label>
+
+        <label>
+          <span>Date</span>
+          <input name="date" type="date" required>
+        </label>
+
+        <label>
+          <span>Post text</span>
+          <textarea name="text" rows="7" placeholder="Write the update here..." required></textarea>
+        </label>
+
+        <label>
+          <span>Media path</span>
+          <input name="media" type="text" placeholder="assets/screenshot.jpg">
+        </label>
+
+        <div class="admin-actions">
+          <button class="button primary" type="submit">Generate</button>
+          <button class="button ghost" type="button" id="copy-post">Copy Block</button>
+          <button class="button ghost" type="reset">Clear</button>
+        </div>
+        <p class="admin-note" id="copy-status">Fill the form, generate the block, then paste it at the top of the posts array in posts.js.</p>
+      </form>
+
+      <aside class="admin-preview">
+        <p class="kicker">Live preview</p>
+        <article class="post-card">
+          <img id="preview-image" src="assets/screen-checkpoint.jpg" alt="Post media preview">
+          <div class="post-body">
+            <time id="preview-date" datetime="">Today</time>
+            <h2 id="preview-title">Post title preview</h2>
+            <p id="preview-text">Your post text will appear here.</p>
+          </div>
+        </article>
+      </aside>
+    </section>
+
+    <section class="code-output-panel">
+      <div>
+        <p class="kicker">Generated post block</p>
+        <h2>Paste Into posts.js</h2>
+      </div>
+      <textarea id="post-output" readonly spellcheck="false"></textarea>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
